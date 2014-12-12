@@ -3,6 +3,7 @@ docker-opensimulator
 
 OpenSimulator docker container 
 
+
 to run the container the fist time:
 
  docker run -d -p 9000:9000 -p 9000:9000/udp quantumobject/docker-opensimulator
@@ -46,11 +47,13 @@ Region (.....) #
 - 'quit' comand to continue.
 
 
+
+
 Use viewer to check the virtual world create by OpenSimulator:
 
 (Imprudence)[http://wiki.kokuaviewer.org/wiki/Imprudence:Downloads]
 
-Grod Manager  to add your virtual world to the application ...
+Grid Manager  to add your virtual world to the application ...
 
 where :
 
