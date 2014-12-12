@@ -8,8 +8,8 @@ to run the container the fist time:
  
 for the first configuration :
 docker exec -it container_id after_install
-- respond the quiestium relate to virtual word 
-- quit comand to continue
+- respond the questions relate to virtual word 
+- 'quit' comand to continue
 
 
 Use viewer to check the virtual world create by OpenSimulator
