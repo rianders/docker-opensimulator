@@ -64,5 +64,5 @@ login page ==> http://external_ip:9000/?method=login
 everything else no importand at this moment ... Apply and then use info to log in .
 
 
-
+for more info for open simulator [http://opensimulator.org/wiki/Main_Page]
 
