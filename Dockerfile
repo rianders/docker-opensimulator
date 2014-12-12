@@ -1,6 +1,5 @@
-#It will be use for reference only ... to create pre-define extruture
-#name of container: docker-xxxxx
-#versison of container: xx.xx.x
+#name of container: docker-opensimulator
+#versison of container: 0.1.0
 FROM quantumobject/docker-baseimage
 MAINTAINER Angel Rodriguez  "angel@quantumobject.com"
 
@@ -9,12 +8,11 @@ ENV HOME /root
 
 #add repository and update the container
 #Installation of nesesary package/software for this containers...
-RUN apt-get update && apt-get install -y -q xxxxxxxxxxxxx \
+RUN apt-get update && apt-get install -y -q nant \
+                                        libmono-microsoft8.0-cil
                     && apt-get clean \
                     && rm -rf /tmp/* /var/tmp/*  \
                     && rm -rf /var/lib/apt/lists/*
-
-#General variable definition....
 
 ##startup scripts  
 #Pre-config scrip that maybe need to be run one time only when the container run the first time .. using a flag to don't 
@@ -43,17 +41,13 @@ COPY backup.sh /sbin/backup
 RUN chmod +x /sbin/backup
 VOLUME /var/backups
 
-
 #add files and script that need to be use for this container
 #include conf file relate to service/daemon 
 #additionsl tools to be use internally 
 
 # to allow access from outside of the container  to the container service
 # at that ports need to allow access from firewall if need to access it outside of the server. 
-EXPOSE #ports
-
-#creatian of volume 
-#VOLUME 
+EXPOSE 9000
 
 # Use baseimage-docker's init system.
 CMD ["/sbin/my_init"]
