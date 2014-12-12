@@ -49,7 +49,7 @@ Region (.....) #
 
 ### Use viewer to check the virtual world create by OpenSimulator:
 
-(Imprudence)[http://wiki.kokuaviewer.org/wiki/Imprudence:Downloads]
+[http://wiki.kokuaviewer.org/wiki/Imprudence:Downloads](http://wiki.kokuaviewer.org/wiki/Imprudence:Downloads)
 
 Grid Manager  to add your virtual world to the application ...
 
@@ -64,5 +64,5 @@ login page ==> http://external_ip:9000/?method=login
 everything else no importand at this moment ... Apply and then use info to log in .
 
 
-for more info for open simulator [http://opensimulator.org/wiki/Main_Page]
+for more info for open simulator [http://opensimulator.org/wiki/Main_Page](http://opensimulator.org/wiki/Main_Page)
 
