@@ -1,7 +1,7 @@
 docker-opensimulator
 ====================
 
-Open Simulator docker container 
+OpenSimulator docker container 
 
 to run the container the fist time:
  docker run -d -p 9000:9000 -p 9000:9000/udp quantumobject/docker-opensimulator
