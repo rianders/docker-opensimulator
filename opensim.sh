@@ -3,5 +3,5 @@
 # `/sbin/setuser mysql` runs the given command as the user `mysql`.
 # If you omit that part, the command will be run as root.
 
-cd /opt/opensim-0.8.0.3/bin/
+cd /opt/opensim-0.8.1-rc2/bin/
 exec ./opensim-ode.sh >>/var/log/opensim.log 2>&1
