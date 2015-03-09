@@ -1,10 +1,7 @@
 #name of container: docker-opensimulator
-#versison of container: 0.1.0
+#versison of container: 0.1.1
 FROM quantumobject/docker-baseimage
 MAINTAINER Angel Rodriguez  "angel@quantumobject.com"
-
-# Set correct environment variables.
-ENV HOME /root
 
 #add repository and update the container
 #Installation of nesesary package/software for this containers...
