@@ -62,7 +62,7 @@ Region (.....) #
 
 ## Use viewer to check the virtual world create by OpenSimulator:
 
-[http://wiki.kokuaviewer.org/wiki/Imprudence:Downloads][1]
+Imprudence viewer [http://wiki.kokuaviewer.org/wiki/Imprudence:Downloads][6]
 
 Grid Manager  to add your virtual world to the application ...
 
