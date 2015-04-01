@@ -1,68 +1,90 @@
-docker-opensimulator
-====================
+# docker-opensimulator
 
-OpenSimulator docker container 
+Docker container for [OpenSimulator 0.8.1][3]
 
+"OpenSimulator is an open source multi-platform, multi-user 3D application server. It can be used to create a virtual environment (or world) which can be accessed through a variety of clients, on multiple protocols. It also has an optional facility (the Hypergrid) to allow users to visit other OpenSimulator installations across the web from their 'home' OpenSimulator installation. In this way, it is the basis of a nascent distributed Metaverse."
 
-### To run the container:
+## Install dependencies
 
- docker run -d -p 9000:9000 -p 9000:9000/udp quantumobject/docker-opensimulator
+  - [Docker][2]
+
+To install docker in Ubuntu 14.04 use the commands:
+
+    $ sudo apt-get update
+    $ sudo apt-get install docker.io
+
+ To install docker in other operating systems check [docker online documentation][4]
+
+## Usage
+
+To run container use the command below:
+
+    $ docker run -d -p 9000:9000 -p 9000:9000/udp quantumobject/docker-opensimulator
  
-### For the first configuration :
+## For the first configuration :
 
-docker exec -it container_id after_install
+    $ docker exec -it container_id after_install
 
-- respond the questions relate to virtual word 
+Them respond the questions relate to virtual word : 
 
-New region name []:     ==> need to entry region name that you want for it .(need to remember it)
+ - New region name []:     ==> need to entry region name that you want for it .(need to remember it).
 
-RegionUUID [29923331-d238-40cc-a308-46d3a129b6e3]:     ===> press enter key to keep the same []
+ - RegionUUID [29923331-dddd-4acc-a3d8-46d3c129b6e3]:     ==> press enter key to keep the same.
 
-Region Location [1000,1000]:                           ===> press enter key to keep the same []
+ - Region Location [1000,1000]:                           ==> press enter key to keep the same.
 
-Internal IP address [0.0.0.0]:                         ===> press enter key to keep the same []
+ - Internal IP address [0.0.0.0]:                         ==> press enter key to keep the same.
 
-Internal port [9000]:                                  ===> press enter key to keep the same []
+ - Internal port [9000]:                                  ==> press enter key to keep the same.
 
-Allow alternate ports [False]:                         ===> press enter key to keep the same []
+ - Allow alternate ports [False]:                         ==> press enter key to keep the same.
 
-External host name [SYSTEMIP]:   ===> need to entry the external ip or your http address don't include the port
+ - External host name [SYSTEMIP]:   ==> need to entry the external ip or your http address don't include the port.
 
-New estate name [My Estate]:     ===> press enter or change it 
+ - New estate name [My Estate]:     ==> press enter or change it. 
 
-Estate owner first name [Test]: ===> change or enter for default Test (need to remember it)
+ - Estate owner first name [Test]:  ==> change or enter for default Test (need to remember it).
 
-Estate owner last name [User]:  ===> change or enter for default User (need to remember it)
+ - Estate owner last name [User]:   ==> change or enter for default User (need to remember it).
 
-Password:                       ===> remember it for login (need to remember it)
+ - Password:                       ==> remember it for login (need to remember it).
 
-Email:                          ===> ..... 
+ - Email:                          ==> ..... 
 
-User ID [6e94775a-821e-4243-a616-366f2a83ea0c]:  ===> press enter key to keep the same []
+ - User ID [6edd775a-8c1e-4a43-ad16-36df2af3ea0c]:  ==> press enter key to keep the same []
 
-after some process it will show :
+After some process it will show:
 
 Region (.....) # 
 
-- 'quit' comand to continue.
+ - 'quit' comand to continue.
 
 
-### Use viewer to check the virtual world create by OpenSimulator:
+## Use viewer to check the virtual world create by OpenSimulator:
 
-[http://wiki.kokuaviewer.org/wiki/Imprudence:Downloads](http://wiki.kokuaviewer.org/wiki/Imprudence:Downloads)
+[http://wiki.kokuaviewer.org/wiki/Imprudence:Downloads][1]
 
 Grid Manager  to add your virtual world to the application ...
 
-where :
+Where:
 
-grid name ==> will be region name
+ - grid name ==> it will be region name
 
-login URL ==>  http://external_ip:9000/  
+ - login URL ==>  http://external_ip:9000/  
 
-login page ==> http://external_ip:9000/?method=login
+ - login page ==> http://external_ip:9000/?method=login
 
-everything else no importand at this moment ... Apply and then use info to log in .
+Everything else no importand at this moment. Press apply and then use info to log in.
 
+## More Info
 
-for more info for open simulator [http://opensimulator.org/wiki/Main_Page](http://opensimulator.org/wiki/Main_Page)
+About OpenSimulator [www.opensimulator.org][1]
 
+To help improve this container [quantumobject/docker-opensimulator][5]
+
+[1]:http://www.opensimulator.org/
+[2]:https://www.docker.com
+[3]:http://opensimulator.org/wiki/Download
+[4]:http://docs.docker.com
+[5]:https://github.com/QuantumObject/docker-opensimulator
+[6]:http://wiki.kokuaviewer.org/wiki/Imprudence:Downloads
