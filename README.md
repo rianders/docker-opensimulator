@@ -51,7 +51,7 @@ Them respond the questions relate to virtual word :
 
  - Email:                          ==> ..... 
 
- - User ID [6edd775a-8c1e-4a43-ad16-36df2af3ea0c]:  ==> press enter key to keep the same []
+ - User ID [6edd775a-8c1e-4a43-ad16-36df2af3ea0c]:  ==> press enter key to keep the same.
 
 After some process it will show:
 
