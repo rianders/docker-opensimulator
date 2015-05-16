@@ -4,4 +4,4 @@
 # If you omit that part, the command will be run as root.
 
 cd /opt/opensim-0.8.1/bin/
-exec ./opensim-ode.sh >>/var/log/opensim.log 2>&1
+exec mono ./OpenSim.exe >>/var/log/opensim.log 2>&1
