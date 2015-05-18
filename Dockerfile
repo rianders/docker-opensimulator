@@ -1,11 +1,11 @@
-#name of container: docker-opensimulator
-#versison of container: 0.1.2
+#Name of container: docker-opensimulator
+#Version of container: 0.1.2
 FROM quantumobject/docker-baseimage
 MAINTAINER Angel Rodriguez  "angel@quantumobject.com"
 
-#add repository and update the container
-#Installation of nesesary package/software for this containers...
-#nant was remove and add mono build dependence
+#Add repository and update the container
+#Installation of necessary package/software for this containers...
+#nant was remove and added mono build dependence
 RUN apt-get update && apt-get install -y -q bzip2 g++ libgettextpo0 gettext automake \
                                         autoconf file make libtool \
                                         libmono-microsoft8.0-cil \
@@ -13,48 +13,43 @@ RUN apt-get update && apt-get install -y -q bzip2 g++ libgettextpo0 gettext auto
                     && rm -rf /tmp/* /var/tmp/*  \
                     && rm -rf /var/lib/apt/lists/*
 
-##startup scripts  
-#Pre-config scrip that maybe need to be run one time only when the container run the first time .. using a flag to don't 
-#run it again ... use for conf for service ... when run the first time ...
+##Startup scripts  
+#Pre-config scrip that needs to be run only when the container runs the first time 
+#Setting a flag for not running it again. This is used for setting up the service.
 RUN mkdir -p /etc/my_init.d
 COPY startup.sh /etc/my_init.d/startup.sh
 RUN chmod +x /etc/my_init.d/startup.sh
 
-
 ##Adding Deamons to containers
-#refers to dockerfile_reference
 
-# to add opensim deamon to runit
+# To add opensim deamon to runit
 RUN mkdir /etc/service/opensim
 COPY opensim.sh /etc/service/opensim/unrun
 RUN chmod +x /etc/service/opensim/unrun
 
-#pre-config scritp for different service that need to be run when container image is create 
-#maybe include additional software that need to be installed ... with some service running ... like example mysqld
+#Pre-config script that needs to be run when container image is created 
+#optionally include here additional software that needs to be installed or configured for some service running on the container.
 COPY pre-conf.sh /sbin/pre-conf
 RUN chmod +x /sbin/pre-conf \
     && /bin/bash -c /sbin/pre-conf \
     && rm /sbin/pre-conf
 
-#down/shutdown script ... use to be run in container before stop or shutdown .to keep service..good status..and maybe
-#backup or keep data integrity .. 
-
-##scritp that can be running from the outside using docker-bash tool ...
-## for example to create backup for database with convitation of VOLUME   dockers-bash container_ID backup_mysql
+##Script that can be running from the outside using 'docker exec -it container_id commands' tool
+##for example to create backups for database.
 COPY backup.sh /sbin/backup
 RUN chmod +x /sbin/backup
 VOLUME /var/backups
 
-#script to execute after install configuration done .... 
+#Script to execute after install done and/or to create initial configuration
 COPY after_install.sh /sbin/after_install
 RUN chmod +x /sbin/after_install
 
-#add files and script that need to be use for this container
+#Add files and scripts that need to be use for this container
 #include conf file relate to service/daemon 
-#additionsl tools to be use internally 
+#additionsl tools to be used internally 
 
-# to allow access from outside of the container  to the container service
-# at that ports need to allow access from firewall if need to access it outside of the server. 
+# To allow access from outside of the container  to the container service at these ports
+# Need to allow ports access rule at firewall too .  
 EXPOSE 9000/tcp
 EXPOSE 9000/udp
 
