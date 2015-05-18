@@ -1,11 +1,13 @@
 #name of container: docker-opensimulator
-#versison of container: 0.1.1
+#versison of container: 0.1.2
 FROM quantumobject/docker-baseimage
 MAINTAINER Angel Rodriguez  "angel@quantumobject.com"
 
 #add repository and update the container
 #Installation of nesesary package/software for this containers...
-RUN apt-get update && apt-get install -y -q nant \
+#nant was remove and add mono build dependence
+RUN apt-get update && apt-get install -y -q bzip2 g++ libgettextpo0 gettext automake \
+                                        autoconf file make libtool \
                                         libmono-microsoft8.0-cil \
                     && apt-get clean \
                     && rm -rf /tmp/* /var/tmp/*  \
