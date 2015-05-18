@@ -3,6 +3,7 @@
 
 # run initial configuration script ...
 cd /opt/opensim-0.8.1/bin/
+cp pCampBot.ini.example pCampBot.ini
 ./opensim-ode.sh
 
 #rename   unrun to run script
