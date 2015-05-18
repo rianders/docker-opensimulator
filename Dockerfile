@@ -8,7 +8,6 @@ MAINTAINER Angel Rodriguez  "angel@quantumobject.com"
 #nant was remove and added mono build dependence
 RUN apt-get update && apt-get install -y -q bzip2 g++ libgettextpo0 gettext automake \
                                         autoconf file make libtool \
-                                        libmono-microsoft8.0-cil \
                     && apt-get clean \
                     && rm -rf /tmp/* /var/tmp/*  \
                     && rm -rf /var/lib/apt/lists/*
