@@ -23,8 +23,6 @@ To run container use the command below:
  
 ## For the first configuration :
 
-    $ docker exec -it container_id after_install
-
 Them respond the questions relate to virtual word : 
 
  - New region name []:     ==> need to entry region name that you want for it .(need to remember it).
