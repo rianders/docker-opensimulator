@@ -3,4 +3,4 @@
 
 
 cd /opt/opensim-0.8.1/bin/
-exec screen -S OpenSim -d -m mono ./OpenSim.exe
+exec screen -S OpenSim -D -m mono ./OpenSim.exe
