@@ -12,3 +12,7 @@ else
         update-locale 
         date > /etc/configured
 fi
+
+cd /opt/opensim-0.8.1/bin/
+exec screen -S OpenSim -d -m mono ./OpenSim.exe
+
