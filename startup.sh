@@ -12,14 +12,3 @@ else
         update-locale 
         date > /etc/configured
 fi
-
-#configuration for the first time.
-
-if [ -f /sbin/after_install ]; then
-
-/sbin/after_install
-
-fi
-
-cd /opt/opensim-0.8.1/bin/
-exec screen -S OpenSim -d -m mono ./OpenSim.exe
