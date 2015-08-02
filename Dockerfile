@@ -1,5 +1,5 @@
 #Name of container: docker-opensimulator
-#Version of container: 0.1.2
+#Version of container: 0.2.0
 FROM quantumobject/docker-baseimage
 MAINTAINER Angel Rodriguez  "angel@quantumobject.com"
 
@@ -21,7 +21,6 @@ COPY startup.sh /etc/my_init.d/startup.sh
 RUN chmod +x /etc/my_init.d/startup.sh
 
 ##Adding Deamons to containers
-
 # To add opensim deamon to runit		
 RUN mkdir /etc/service/opensim		
 COPY opensim.sh /etc/service/opensim/unrun		
@@ -43,10 +42,6 @@ VOLUME /var/backups
 #Script to execute after install done and/or to create initial configuration
 COPY after_install.sh /sbin/after_install
 RUN chmod +x /sbin/after_install
-
-#Add files and scripts that need to be use for this container
-#include conf file relate to service/daemon 
-#additionsl tools to be used internally 
 
 # To allow access from outside of the container  to the container service at these ports
 # Need to allow ports access rule at firewall too .  
