@@ -1,6 +1,6 @@
 #Name of container: docker-opensimulator
-#Version of container: 0.2.0
-FROM quantumobject/docker-baseimage
+#Version of container: 0.2.1
+FROM angelrr7702/docker-baseimage
 MAINTAINER Angel Rodriguez  "angel@quantumobject.com"
 
 #Add repository and update the container
