@@ -57,7 +57,7 @@ After some process it will show:
 
 Region (.....) # 
 
- - 'quit' comand to continue.
+ - 'quit' command to continue.
 
 
 ## Use viewer to check the virtual world create by OpenSimulator:
@@ -74,7 +74,7 @@ Where:
 
  - login page ==> http://external_ip:9000/?method=login
 
-Everything else no importand at this moment. Press apply and then use info to log in.
+Everything else no important at this moment. Press apply and then use info to log in.
 
 ## More Info
 
