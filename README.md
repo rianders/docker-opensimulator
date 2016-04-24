@@ -1,6 +1,6 @@
 # docker-opensimulator
 
-Docker container for [OpenSimulator 0.8.2.0-rc1][3]
+Docker container for [OpenSimulator 0.8.2.1][3]
 
 "OpenSimulator is an open source multi-platform, multi-user 3D application server. It can be used to create a virtual environment (or world) which can be accessed through a variety of clients, on multiple protocols. It also has an optional facility (the Hypergrid) to allow users to visit other OpenSimulator installations across the web from their 'home' OpenSimulator installation. In this way, it is the basis of a nascent distributed Metaverse."
 
@@ -82,7 +82,7 @@ About OpenSimulator [www.opensimulator.org][1]
 
 To help improve this container [quantumobject/docker-opensimulator][5]
 
-For additional info about us and our projects check our site [www.quantumobject.com][7]
+For additional info about us and our projects check our site [www.quantumobject.org][7]
 
 [1]:http://www.opensimulator.org/
 [2]:https://www.docker.com
@@ -90,4 +90,4 @@ For additional info about us and our projects check our site [www.quantumobject.
 [4]:http://docs.docker.com
 [5]:https://github.com/QuantumObject/docker-opensimulator
 [6]:http://wiki.kokuaviewer.org/wiki/Imprudence:Downloads
-[7]:http://www.quantumobject.com/
+[7]:https://www.quantumobject.org/

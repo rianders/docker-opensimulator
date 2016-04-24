@@ -1,5 +1,5 @@
 #Name of container: docker-opensimulator
-#Version of container: 0.2.2
+#Version of container: 0.2.3
 FROM quantumobject/docker-baseimage:15.10
 MAINTAINER Angel Rodriguez  "angel@quantumobject.com"
 
@@ -29,15 +29,9 @@ RUN chmod +x /etc/service/opensim/unrun
 #Pre-config script that needs to be run when container image is created 
 #optionally include here additional software that needs to be installed or configured for some service running on the container.
 COPY pre-conf.sh /sbin/pre-conf
-RUN chmod +x /sbin/pre-conf \
+RUN chmod +x /sbin/pre-conf ; sync \
     && /bin/bash -c /sbin/pre-conf \
     && rm /sbin/pre-conf
-
-##Script that can be running from the outside using 'docker exec -it container_id commands' tool
-##for example to create backups for database.
-COPY backup.sh /sbin/backup
-RUN chmod +x /sbin/backup
-VOLUME /var/backups
 
 #Script to execute after install done and/or to create initial configuration
 COPY after_install.sh /sbin/after_install
