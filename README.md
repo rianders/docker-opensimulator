@@ -8,7 +8,7 @@ Docker container for [OpenSimulator 0.9.0.0-rc2][3]
 
   - [Docker][2]
 
-To install docker in Ubuntu 14.04 use the commands:
+To install docker in Ubuntu 16.04 use the commands:
 
     $ sudo apt-get update
     $ wget -qO- https://get.docker.com/ | sh
