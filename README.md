@@ -21,6 +21,10 @@ To run container use the command below:
 
     $ docker run -d -p 9000:9000 -p 9000:9000/udp quantumobject/docker-opensimulator
  
+ For stable release please try verison 0.8.2.1
+ 
+     $ docker run -d -p 9000:9000 -p 9000:9000/udp quantumobject/docker-opensimulator:0.8.2.1
+ 
 ## For the first configuration :
 
      $ docker exec -it container_id after_install
