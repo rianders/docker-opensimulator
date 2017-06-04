@@ -3,14 +3,20 @@
 FROM quantumobject/docker-baseimage:16.04
 MAINTAINER Angel Rodriguez  "angel@quantumobject.com"
 
+#to fix problem with /etc/localtime
+ENV TZ America/New_York
+
 #Add repository and update the container
 #Installation of necessary package/software for this containers...
 #nant was remove and added mono build dependence
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF \ 
     && echo "deb http://download.mono-project.com/repo/ubuntu xenial main" | tee /etc/apt/sources.list.d/mono-official.list
-RUN apt-get update && apt-get install -y -q screen mono-complete ca-certificates-mono\
+RUN echo $TZ > /etc/timezone && apt-get update && apt-get install -y -q screen mono-complete ca-certificates-mono tzdata \
+                    && rm /etc/localtime  \
+                    && ln -snf /usr/share/zoneinfo/$TZ /etc/localtime \
+                    && dpkg-reconfigure -f noninteractive tzdata \
                     && apt-get clean \
-                    && rm -rf /tmp/* /var/tmp/*  \
+                    && rm -rf /tmp/* /var/tmp/*  \ 
                     && rm -rf /var/lib/apt/lists/*
 
 ##Startup scripts  
