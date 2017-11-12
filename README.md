@@ -1,6 +1,6 @@
 # docker-opensimulator
 
-Docker container for [OpenSimulator 0.9.0.0-rc2][3]
+Docker container for [OpenSimulator 0.9.0.0][3]
 
 "OpenSimulator is an open source multi-platform, multi-user 3D application server. It can be used to create a virtual environment (or world) which can be accessed through a variety of clients, on multiple protocols. It also has an optional facility (the Hypergrid) to allow users to visit other OpenSimulator installations across the web from their 'home' OpenSimulator installation. In this way, it is the basis of a nascent distributed Metaverse."
 
@@ -11,7 +11,7 @@ Docker container for [OpenSimulator 0.9.0.0-rc2][3]
 To install docker in Ubuntu 16.04 use the commands:
 
     $ sudo apt-get update
-    $ wget -qO- https://get.docker.com/ | sh
+    $ sudo wget -qO- https://get.docker.com/ | sh
 
  To install docker in other operating systems check [docker online documentation][4]
 
@@ -20,10 +20,6 @@ To install docker in Ubuntu 16.04 use the commands:
 To run container use the command below:
 
     $ docker run -d -p 9000:9000 -p 9000:9000/udp quantumobject/docker-opensimulator
- 
- For stable release please try verison 0.8.2.1
- 
-     $ docker run -d -p 9000:9000 -p 9000:9000/udp quantumobject/docker-opensimulator:0.8.2.1
  
 ## For the first configuration :
 
@@ -41,7 +37,7 @@ Them respond the questions relate to virtual word :
 
  - Internal port [9000]:                                  ==> press enter key to keep the same.
 
- - Allow alternate ports [False]:                         ==> press enter key to keep the same.
+ - Resolve hostname to IP on start (for running inside docker) [False]:  ==> press enter key to keep the same.
 
  - External host name [SYSTEMIP]:   ==> need to entry the external ip or your http address don't include the port.
 
