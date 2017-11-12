@@ -37,7 +37,7 @@ Them respond the questions relate to virtual word :
 
  - Internal port [9000]:                                  ==> press enter key to keep the same.
 
- - Allow alternate ports [False]:                         ==> press enter key to keep the same.
+ - Resolve hostname to IP on start (for running inside docker) [False]:  ==> press enter key to keep the same.
 
  - External host name [SYSTEMIP]:   ==> need to entry the external ip or your http address don't include the port.
 
