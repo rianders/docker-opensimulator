@@ -1,6 +1,6 @@
 #Name of container: docker-opensimulator
-#Version of container: 0.3.1
-FROM quantumobject/docker-baseimage:16.04
+#Version of container: 0.3.2
+FROM quantumobject/docker-baseimage:18.04
 MAINTAINER Angel Rodriguez  "angel@quantumobject.com"
 
 #to fix problem with /etc/localtime
@@ -10,7 +10,7 @@ ENV TZ America/New_York
 #Installation of necessary package/software for this containers...
 #nant was remove and added mono build dependence
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF \ 
-    && echo "deb http://download.mono-project.com/repo/ubuntu xenial main" | tee /etc/apt/sources.list.d/mono-official.list
+    && echo "deb http://download.mono-project.com/repo/ubuntu stable-bionic main" | tee /etc/apt/sources.list.d/mono-official-stable.list
 RUN echo $TZ > /etc/timezone && apt-get update && apt-get install -y -q screen mono-complete ca-certificates-mono tzdata \
                     && rm /etc/localtime  \
                     && ln -snf /usr/share/zoneinfo/$TZ /etc/localtime \
