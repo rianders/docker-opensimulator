@@ -1,5 +1,5 @@
 #Name of container: docker-opensimulator
-#Version of container: 0.3.2
+#Version of container: 0.4.1
 FROM quantumobject/docker-baseimage:18.04
 MAINTAINER Angel Rodriguez  "angel@quantumobject.com"
 
