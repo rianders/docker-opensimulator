@@ -1,7 +1,7 @@
 #!/bin/bash
 
-opensim_version=0.9.0.1
-# installing opensim-0.9.0.1
+opensim_version=0.9.1.1
+# installing opensim-0.9.1.1
 cd /opt/
 wget http://opensimulator.org/dist/opensim-${opensim_version}.tar.gz
 tar xvfvz opensim-${opensim_version}.tar.gz
